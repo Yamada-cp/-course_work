@@ -47,7 +47,7 @@ public:
     }
 };
 
-// --- МЕНЮ ТА КНОПКИ (ПОВЕРНУТО НА АНГЛІЙСЬКУ) ---
+// --- МЕНЮ ТА КНОПКИ ---
 struct MenuResources {
     sf::Texture background, title;
     sf::Font font;
@@ -57,7 +57,6 @@ class SimpleButton {
 public:
     sf::RectangleShape rect; sf::Text text; bool isHovered = false;
 
-    // Повернули std::string для надійності
     SimpleButton(sf::Vector2f position, std::string labelText, sf::Font& font, sf::Vector2f size = sf::Vector2f(250.f, 50.f)) {
         rect.setSize(size); rect.setOrigin(size.x / 2.f, size.y / 2.f); rect.setPosition(position);
         rect.setFillColor(sf::Color(50, 50, 50, 200)); rect.setOutlineThickness(3.f); rect.setOutlineColor(sf::Color(200, 150, 50));
@@ -210,7 +209,6 @@ public:
                     }
                 }
                 if (bestIdx != -1) {
-                    // Бот перевертає карту перед тим, як покласти на стіл!
                     CardVisual playedCard = oppHand[bestIdx];
                     playedCard.showFace();
 
@@ -235,7 +233,6 @@ public:
                     }
                 }
                 if (bestIdx != -1) {
-                    // Бот перевертає карту захисту!
                     CardVisual playedCard = oppHand[bestIdx];
                     playedCard.showFace();
 
@@ -267,14 +264,12 @@ int main() {
     std::vector<SimpleButton> menuButtons;
     float startX = 250.f; float startY = 300.f;
 
-    // Всі кнопки англійською для безпеки
     menuButtons.emplace_back(sf::Vector2f(startX, startY), "Play", menuRes.font);
     menuButtons.emplace_back(sf::Vector2f(startX, startY + 70.f), "Leaderboard", menuRes.font);
     menuButtons.emplace_back(sf::Vector2f(startX, startY + 140.f), "Settings", menuRes.font);
     menuButtons.emplace_back(sf::Vector2f(startX, startY + 210.f), "News", menuRes.font);
     menuButtons.emplace_back(sf::Vector2f(startX, startY + 280.f), "Achievements", menuRes.font);
 
-    // Ігрові кнопки англійською
     SimpleButton btnPass(sf::Vector2f(850.f, 300.f), "PASS", menuRes.font, sf::Vector2f(180.f, 50.f));
     SimpleButton btnTake(sf::Vector2f(850.f, 400.f), "TAKE", menuRes.font, sf::Vector2f(180.f, 50.f));
 
