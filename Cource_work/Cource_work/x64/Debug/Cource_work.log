@@ -1,7 +1,0 @@
-﻿  Durak1.0.cpp
-C:\Users\Користувач\source\repos\Cource_work\Durak1.0.cpp(208,39): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Користувач\source\repos\Cource_work\Durak1.0.cpp(233,39): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Користувач\source\repos\Cource_work\Durak1.0.cpp(327,36): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Користувач\source\repos\Cource_work\Durak1.0.cpp(418,32): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Користувач\source\repos\Cource_work\Durak1.0.cpp(420,78): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-  Cource_work.vcxproj -> C:\Users\Користувач\source\repos\Cource_work\x64\Debug\Cource_work.exe
